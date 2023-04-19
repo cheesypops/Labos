@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Laboratorio5Viana</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="billboard">BILLBOARD</string>
+    <string name="title_starwars">Star Wars episodio 3: \nLa venganza de los Sith</string>
+    <string name="rate_starwars">9.8</string>
+    <string name="gender">Ciencia ficcion</string>
+</resources>
