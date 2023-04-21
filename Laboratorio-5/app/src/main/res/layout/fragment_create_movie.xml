@@ -1,14 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateMovieFragment">
+    tools:context=".CreateMovieFragment"
+    android:background="@color/backgroundLayout"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:id="@+id/textView4"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:text="@string/new_movie"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/big_gap"
+        android:layout_marginBottom="@dimen/big_gap"
+        android:textAlignment="center"
+        android:textSize="@dimen/big_size"
+        android:textColor="@color/white"/>
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/a1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/big_gap"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/medium_size"
+        android:layout_marginLeft="@dimen/medium_gap"
+        android:layout_marginRight="@dimen/medium_gap"
+        android:background="@color/cardLayout"
+        android:padding="@dimen/medium_gap"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/a2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/big_gap"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/medium_size"
+        android:layout_marginLeft="@dimen/medium_gap"
+        android:layout_marginRight="@dimen/medium_gap"
+        android:background="@color/cardLayout"
+        android:padding="@dimen/medium_gap"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/a3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/big_gap"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/medium_size"
+        android:layout_marginLeft="@dimen/medium_gap"
+        android:layout_marginRight="@dimen/medium_gap"
+        android:background="@color/cardLayout"
+        android:padding="@dimen/medium_gap"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/a4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calification"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/big_gap"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/medium_size"
+        android:layout_marginLeft="@dimen/medium_gap"
+        android:layout_marginRight="@dimen/medium_gap"
+        android:background="@color/cardLayout"
+        android:padding="@dimen/medium_gap"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/big_gap"
+        android:text="Submit"
+        android:textSize="@dimen/medium_size"
+        android:backgroundTint="@color/buttonColor"/>
+
+</LinearLayout>

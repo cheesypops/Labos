@@ -6,4 +6,5 @@
     <string name="title_starwars">Star Wars episodio 3: \nLa venganza de los Sith</string>
     <string name="rate_starwars">9.8</string>
     <string name="gender">Ciencia ficcion</string>
+    <string name="new_movie">New Movie</string>
 </resources>

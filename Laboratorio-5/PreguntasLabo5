@@ -1,0 +1,8 @@
+1. ¿Qué diferencia existe entre navegar dentro de la aplicación utilizando Navigation Component o hacer uso de intents?
+Navigation component termina siendo mas practico que el uso de intents entre mas "vistas" existan, y la información se puede mantener gracias a un view model, ya que evita la necesidad de crear intents y sobrecargar bundles cada vez q se cambia de fragmento.
+
+2.Menciona los componentes fundamentales de Navigation Component
+Navigation graph, navHost y navController
+
+3.Mencione algunas de las ventajas del Navigation Graph
+Se vuelve mas intuitivo el proceso de union de fragmentos, ya que podemos tener de una manera mas concreta y visual la ruta de fragmentos que deseamos mostrar en la actividad.

@@ -62,10 +62,16 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_gap"
         android:layout_marginTop="@dimen/big_gap"
-        android:text="TERMINAR ESTO"
+        android:layout_marginEnd="@dimen/small_gap"
+        android:text="La película se sentra en el personaje Anakin
+        Skywalker quien esta siendo tentado por el lado oscuro de la fuerza
+        mientras el Imperio Galáctico comienza a surgir. La trama muestra también la
+        caída de la República Galáctica y el ascenso del emperador Palpatine"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
