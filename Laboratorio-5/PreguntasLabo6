@@ -1,0 +1,5 @@
+1. En que consite el patron de diseño Repository?
+Es un patron que consiste en separar los datos de la aplicacion, en una seccion donde solo se controlen los datos y la logica empresarial, separando la UI haciendo que esta se enfoque solamente en mostrar las vistas con los datos.
+
+2. Que es el ViewModel?
+es un contenedor que expone el estado de la UI y encapsula la logica empresarial, siendo este util para almacenar en cache el estado de los datos y ayuda a conservarlos duarnte la navegacion o cambios de configuracion cuando se rota la pantalla, a parte de servir de intermediario entre la capa de datos y la capa de la interfaz, a parte de depender del repositorio.

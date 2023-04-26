@@ -1,7 +1,8 @@
-package com.example.laboratorio5viana
+package com.example.laboratorio5viana.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.laboratorio5viana.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
