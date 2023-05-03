@@ -7,11 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
 import com.example.laboratorio5viana.R
 import com.example.laboratorio5viana.data.models.MovieModel
 import com.example.laboratorio5viana.databinding.FragmentCreateMovieBinding
-import com.example.laboratorio5viana.databinding.FragmentMovieBinding
+//import com.example.laboratorio5viana.databinding.FragmentMovieBinding
 
 
 class CreateMovieFragment : Fragment() {
@@ -34,24 +35,35 @@ class CreateMovieFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.submit.setOnClickListener{
-            createMovie()
+        setviewModel()
+        setObserver()
+    }
+
+    private fun setviewModel(){
+        binding.viewmodel = viewModel
+    }
+
+    private fun setObserver(){
+        viewModel.status.observe(viewLifecycleOwner){status ->
+            when{
+                status.equals(MovieViewModel.MOVIE_CREATED) -> {
+                    Log.d("TAG_APP", status)
+                    Log.d("TAG_APP", viewModel.getMovies().toString())
+
+                    viewModel.clearstatus()
+                    viewModel.clearData()
+
+                    findNavController().popBackStack()
+                }
+
+                status.equals((MovieViewModel.WRONG_DATA)) -> {
+                    Log.d("TAG_APP", status)
+                    viewModel.clearstatus()
+                }
+            }
         }
     }
 
-    private fun createMovie(){
-        val newMovie = MovieModel(
-            binding.a1.text.toString(),
-            binding.a2.text.toString(),
-            binding.a3.text.toString(),
-            binding.a4.text.toString()
-        )
 
-        viewModel.addMovies(newMovie)
-
-        Log.d("TAG_APP", viewModel.getMovies().toString())
-
-        findNavController().popBackStack()
-    }
 
 }
