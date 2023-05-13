@@ -1,4 +1,4 @@
-package com.example.laboratorio5viana.ui.movie
+package com.example.laboratorio5viana.ui.movie.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -7,6 +7,7 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.laboratorio5viana.MovieReviewerApplication
 import com.example.laboratorio5viana.data.models.MovieModel
+import com.example.laboratorio5viana.data.qualification
 import com.example.laboratorio5viana.repository.MovieRepository
 
 class MovieViewModel(private val repository: MovieRepository): ViewModel() {
@@ -57,7 +58,15 @@ class MovieViewModel(private val repository: MovieRepository): ViewModel() {
         status.value = BASE_STATE
     }
 
+    fun setSelectedMovie(movie: MovieModel){
+        name.value = movie.name
+        category.value = movie.category
+        description.value = movie.description
+        qualification.value = movie.qualification
+    }
+
     companion object{
+
         val Factory = viewModelFactory {
             initializer {
                 val app = this[APPLICATION_KEY] as MovieReviewerApplication

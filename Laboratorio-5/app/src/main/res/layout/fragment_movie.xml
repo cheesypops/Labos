@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="viewmodel"
+            type="com.example.laboratorio5viana.ui.movie.viewmodel.MovieViewModel" />
     </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,11 +25,11 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tittle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/big_gap"
-            android:text="@string/title_starwars"
+            android:text="@{viewmodel.name}"
             android:textSize="@dimen/medium_size"
             android:textStyle="bold"
             android:textColor="@color/white"
@@ -43,40 +44,39 @@
             android:layout_marginTop="@dimen/medium_gap"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="@+id/tittle"
             app:layout_constraintHorizontal_bias="0.387"
-            app:layout_constraintStart_toStartOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView2">
+            app:layout_constraintStart_toStartOf="@+id/tittle"
+            app:layout_constraintTop_toBottomOf="@+id/tittle">
 
             <TextView
+                android:id="@+id/category"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:paddingRight="16dp"
-                android:text="@string/gender"
+                android:text="@{viewmodel.category}"
                 android:textColor="@color/white"
                 android:textSize="@dimen/small_size" />
 
             <TextView
+                android:id="@+id/qualification"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="@string/rate_starwars"
+                android:text="@{viewmodel.qualification}"
                 android:textColor="@color/white"
                 android:textSize="@dimen/small_size" />
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/small_gap"
             android:layout_marginTop="@dimen/big_gap"
             android:layout_marginEnd="@dimen/small_gap"
-            android:text="La película se sentra en el personaje Anakin
-        Skywalker quien esta siendo tentado por el lado oscuro de la fuerza
-        mientras el Imperio Galáctico comienza a surgir. La trama muestra también la
-        caída de la República Galáctica y el ascenso del emperador Palpatine"
+            android:text="@{viewmodel.description}"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/linearLayout"
             app:layout_constraintStart_toStartOf="@+id/linearLayout"

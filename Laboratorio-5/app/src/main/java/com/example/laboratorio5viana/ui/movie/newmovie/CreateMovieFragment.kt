@@ -1,4 +1,4 @@
-package com.example.laboratorio5viana.ui.movie
+package com.example.laboratorio5viana.ui.movie.newmovie
 
 import android.os.Bundle
 import android.util.Log
@@ -7,11 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
-import com.example.laboratorio5viana.R
-import com.example.laboratorio5viana.data.models.MovieModel
 import com.example.laboratorio5viana.databinding.FragmentCreateMovieBinding
+import com.example.laboratorio5viana.ui.movie.viewmodel.MovieViewModel
+
 //import com.example.laboratorio5viana.databinding.FragmentMovieBinding
 
 

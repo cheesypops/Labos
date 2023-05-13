@@ -2,12 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.movie.CreateMovieFragment">
+    tools:context=".ui.movie.newmovie.CreateMovieFragment">
 
     <data>
         <variable
             name="viewmodel"
-            type="com.example.laboratorio5viana.ui.movie.MovieViewModel" />
+            type="com.example.laboratorio5viana.ui.movie.viewmodel.MovieViewModel" />
     </data>
 
 
